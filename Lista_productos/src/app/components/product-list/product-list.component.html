@@ -1,0 +1,4 @@
+<div class="list-container">
+    <app-product-card *ngFor="let product of products" [product]="product" (productSelected)="reload($event)"> </app-product-card>
+    <app-product-detail *ngIf="productToShow.id!=0" [product]="productToShow" ></app-product-detail>
+</div>

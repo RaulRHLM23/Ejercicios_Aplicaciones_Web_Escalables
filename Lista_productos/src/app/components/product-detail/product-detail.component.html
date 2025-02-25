@@ -1,0 +1,17 @@
+<div class="product-details">
+    <h1>Detalles del producto</h1>
+
+    <img [src]="product.img" alt="{{product.name}}">
+
+    <h2>{{product.name}}</h2>
+
+    <p>Precio: <strong>${{product.price}}</strong></p>
+
+    <p [ngClass]="{'stock-available': product.inStock, 'stock-out': !product.inStock}">
+        {{ product.inStock ? "Disponible" : "Agotado" }}
+    </p>
+
+    <p [ngClass]="{'onSale': product.onSale}">
+        {{ product.onSale ? "¡En oferta!" : "Precio regular" }}
+    </p>
+</div>

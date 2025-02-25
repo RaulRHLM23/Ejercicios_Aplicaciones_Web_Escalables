@@ -1,0 +1,9 @@
+<div class="Card" >
+    <div>
+        <h1 [ngClass]="{'onSaleTitle' : product.onSale}">{{product.name}}</h1>
+        <p>Price: {{product.price}}</p>
+        <button (click)="onSelected()">{{isSelected ? "Ver menos" : "Ver más"}}</button> 
+        <p [ngClass]="{'offStock': !product.inStock}">{{product.inStock ? "" : "Agotado"}}</p>
+        
+    </div>
+</div>
